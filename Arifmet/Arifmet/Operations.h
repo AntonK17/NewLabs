@@ -1,5 +1,15 @@
 #include "Stacksimple.h" 
 
+class Ar
+{
+private:
+	string inf;
+public:
+
+Ar(string inf_)
+{
+	inf=inf_;
+}
 int Priority(char o)
 { 
 	int Prt;
@@ -44,7 +54,7 @@ int IsOperation(char o)
 }
 
 
-string ToPost(string &Infix)
+string ToPost()
 {
 	char ch, t;
 	string tmp("");
@@ -52,18 +62,18 @@ string ToPost(string &Infix)
 
 
 	TStack <char> OperationStack(10);
-	ch = Infix[pos];
+	ch = inf[pos];
 	do
 	{
 		
 		if (IsOperand(ch)) 
 		{
 			string operand;
-			while ((pos < Infix.length()) && IsOperand(ch))
+			while ((pos < inf.length()) && IsOperand(ch))
 			{
-				operand += Infix[pos];
+				operand += inf[pos];
 				pos++;
-				ch = Infix[pos];
+				ch = inf[pos];
 			}
 			tmp += " " + operand;
 		}
@@ -102,7 +112,7 @@ string ToPost(string &Infix)
 			pos++;
 			
 		}
-		ch = Infix[pos];
+		ch = inf[pos];
 	}
 	while (ch != '=');
 
@@ -117,8 +127,9 @@ string ToPost(string &Infix)
 	return tmp;
 
 }
- double Answer(string &tmp)
+ double Answer()
 { 
+	string tmp=ToPost();
 	TStack <double> CalcStack(25);
 
 
@@ -165,3 +176,4 @@ ch = tmp[pos1];
 	return rez;
 
 }
+};

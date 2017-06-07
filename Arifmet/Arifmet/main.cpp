@@ -13,8 +13,9 @@ int main()
 
 	cout << "Введите выражение в формате 'выражение='"<<endl;
 	cin >> inf;
-	string post = ToPost(inf);
-	cout <<inf<< Answer(post)<<endl;
+	Ar u(inf);
+	string post = u.ToPost();
+	cout <<inf<< u.Answer()<<endl;
 	cout << "Постфиксная запись: " <<post << endl;
 
 	_getch();
