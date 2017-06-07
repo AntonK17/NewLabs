@@ -7,13 +7,14 @@ template <class KEY, class DATA>
 class Table
 {
 protected:
-	int size; //общий размер
-	int count;//текущее число записей
-	int p; // смещение
-	Node<KEY,DATA>* mas; // данные
+	int size;
+	int count;
+	int p; 
+	Node<KEY,DATA>* mas; 
 	int Hash(KEY K);
+
 public:
-Table(int size_ = 1,int p_ =5); // конструктор
+Table(int size_ = 1,int p_ =5); 
 Table(Table& ht);
 ~Table();
 Node<KEY,DATA>& operator[](KEY k_);

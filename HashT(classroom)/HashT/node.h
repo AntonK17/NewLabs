@@ -43,4 +43,4 @@ void Node<KEY, DATA>::SetVal(DATA val_)
 }
 
 
-#endif //_NODE_H_
+#endif
