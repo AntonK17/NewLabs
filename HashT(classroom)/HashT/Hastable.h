@@ -21,6 +21,7 @@ Node<KEY,DATA>& operator[](KEY k_);
 Table& operator=(Table& ht);
 void Add(KEY k_ ,DATA val_);
 void Del(KEY k_);
+void Print();
 };
 
 template <class KEY, class DATA>
@@ -54,8 +55,10 @@ Table<KEY, DATA>::~Table()
 
 template <class KEY, class DATA>
 int Table<KEY, DATA>:: Hash(KEY K)
+
 {
-	return ((int)K)% 17;
+
+return ((((int)K%10)*10 + ((int)K%100)/10)%53);
 
 }
 

@@ -6,23 +6,27 @@ using namespace std;
 int main()
 {
 	setlocale(LC_ALL, "Russian");
-	const int n=53;
+	const int n=100;
 	Node<int, int> a;
 	a.SetKey(1);
 	a.SetVal(1);
 	cout<<a.GetData()<<", ключ: "<<a.GetKey()<<endl;
+	char r='a';
+	int random;
 
-	Table<int,int> t(n,5);
+	Table<char,int> t(n,5);
 		for (int i=0;i<n;i++)
 			{
-				int r=rand()%17;
+				random=rand()%5;
+				r=r+random;
 				t.Add (r,i);
 				cout<<"("<<i<<", "<<r<<"); ";
 			}
-		cout<<endl<<"Вывод с использованием [] Формат: (KEY, DATA)"<<endl;
-		for (int i=0;i<10;i++)
+		cout<<endl<<"Вывод с использованием [] Формат: (DATA, KEY)"<<endl;
+ r='a';
+		for (int i=0;i<20;i++)
 		{
-			int r=rand()%17;
+			r ++;
 			cout<<"Поиск по ключу ["<<r<<"]"<<endl;
 			cout<<"("<<t[r].GetData()<<", "<<t[r].GetKey()<<"); "<<endl;
 		

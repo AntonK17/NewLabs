@@ -15,6 +15,7 @@ int Priority(char o)
 	int Prt;
 	switch (o) 
 	{
+	case '^': Prt = 4; break;
 	case '*':
 	case '/': Prt = 3; break;
 	case '+':
@@ -48,7 +49,7 @@ bool IsOperand(char n)
 
 int IsOperation(char o)
 {
-	if (o == '+' || o == '-' || o == '*' || o == '/' || o == '=') return 1;
+	if (o == '+' || o == '-' || o == '*' || o == '/' || o == '=' || o=='^') return 1;
 	else 
 		return 0;
 }
@@ -165,6 +166,7 @@ ch = tmp[pos1];
 			case '-':CalcStack.Push(op_l - op_r); break;
 			case '*':CalcStack.Push(op_l * op_r); break;
 			case '/':CalcStack.Push(op_l / op_r); break;
+			case '^':CalcStack.Push(pow(op_l,op_r)); break;
 			}
 			pos1++;
 		}
