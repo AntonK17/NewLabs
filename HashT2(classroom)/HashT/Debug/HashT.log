@@ -1,46 +1,72 @@
-﻿Build started 09.06.2017 0:32:46.
-     1>Project "C:\Users\Юзверь\Desktop\HashT(classroom)\HashT\HashT.vcxproj" on node 2 (Build target(s)).
+﻿Build started 09.06.2017 1:19:18.
+     1>Project "C:\Users\Юзверь\Desktop\newLabs\HashT2(classroom)\HashT\HashT.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
          D:\Program files\VS12\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc110.pdb" /Gd /TP /analyze- /errorReport:prompt m.cpp
          m.cpp
-     1>c:\users\юзверь\desktop\hasht(classroom)\hasht\hastable.h(82): warning C4018: '<' : signed/unsigned mismatch
-                 c:\users\юзверь\desktop\hasht(classroom)\hasht\hastable.h(71) : while compiling class template member function 'Node<KEY,DATA> &Table<KEY,DATA>::operator [](KEY)'
+     1>c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\hastable.h(83): warning C4018: '<' : signed/unsigned mismatch
+                 c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\hastable.h(72) : while compiling class template member function 'Node<KEY,DATA> &Table<KEY,DATA>::operator [](KEY)'
                  with
                  [
                      KEY=std::string,
                      DATA=int
                  ]
-                 c:\users\юзверь\desktop\hasht(classroom)\hasht\m.cpp(28) : see reference to function template instantiation 'Node<KEY,DATA> &Table<KEY,DATA>::operator [](KEY)' being compiled
+                 c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\m.cpp(28) : see reference to function template instantiation 'Node<KEY,DATA> &Table<KEY,DATA>::operator [](KEY)' being compiled
                  with
                  [
                      KEY=std::string,
                      DATA=int
                  ]
-                 c:\users\юзверь\desktop\hasht(classroom)\hasht\m.cpp(16) : see reference to class template instantiation 'Table<KEY,DATA>' being compiled
+                 c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\m.cpp(16) : see reference to class template instantiation 'Table<KEY,DATA>' being compiled
                  with
                  [
                      KEY=std::string,
                      DATA=int
                  ]
-     1>c:\users\юзверь\desktop\hasht(classroom)\hasht\hastable.h(108): warning C4018: '<' : signed/unsigned mismatch
-                 c:\users\юзверь\desktop\hasht(classroom)\hasht\hastable.h(89) : while compiling class template member function 'void Table<KEY,DATA>::Add(KEY,DATA)'
+     1>c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\hastable.h(109): warning C4018: '<' : signed/unsigned mismatch
+                 c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\hastable.h(90) : while compiling class template member function 'void Table<KEY,DATA>::Add(KEY,DATA)'
                  with
                  [
                      KEY=std::string,
                      DATA=int
                  ]
-                 c:\users\юзверь\desktop\hasht(classroom)\hasht\m.cpp(18) : see reference to function template instantiation 'void Table<KEY,DATA>::Add(KEY,DATA)' being compiled
+                 c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\m.cpp(18) : see reference to function template instantiation 'void Table<KEY,DATA>::Add(KEY,DATA)' being compiled
                  with
                  [
                      KEY=std::string,
                      DATA=int
                  ]
-     1>c:\users\юзверь\desktop\hasht(classroom)\hasht\hastable.h(84): warning C4715: 'Table<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,int>::operator[]' : not all control paths return a value
+     1>c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\hastable.h(62): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+                 d:\program files\vs12\vc\include\string.h(110) : see declaration of 'strcpy'
+                 c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\hastable.h(59) : while compiling class template member function 'unsigned int Table<KEY,DATA>::Hash(KEY)'
+                 with
+                 [
+                     KEY=std::string,
+                     DATA=int
+                 ]
+                 c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\hastable.h(73) : see reference to function template instantiation 'unsigned int Table<KEY,DATA>::Hash(KEY)' being compiled
+                 with
+                 [
+                     KEY=std::string,
+                     DATA=int
+                 ]
+                 c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\hastable.h(30) : while compiling class template member function 'Table<KEY,DATA>::Table(int,int)'
+                 with
+                 [
+                     KEY=std::string,
+                     DATA=int
+                 ]
+                 c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\m.cpp(16) : see reference to function template instantiation 'Table<KEY,DATA>::Table(int,int)' being compiled
+                 with
+                 [
+                     KEY=std::string,
+                     DATA=int
+                 ]
+     1>c:\users\юзверь\desktop\newlabs\hasht2(classroom)\hasht\hastable.h(85): warning C4715: 'Table<std::basic_string<char,std::char_traits<char>,std::allocator<char> >,int>::operator[]' : not all control paths return a value
        Link:
-         D:\Program files\VS12\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Юзверь\Desktop\HashT(classroom)\Debug\HashT.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Юзверь\Desktop\HashT(classroom)\Debug\HashT.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Юзверь\Desktop\HashT(classroom)\Debug\HashT.lib" /MACHINE:X86 Debug\m.obj
-         HashT.vcxproj -> C:\Users\Юзверь\Desktop\HashT(classroom)\Debug\HashT.exe
-     1>Done Building Project "C:\Users\Юзверь\Desktop\HashT(classroom)\HashT\HashT.vcxproj" (Build target(s)).
+         D:\Program files\VS12\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"C:\Users\Юзверь\Desktop\newLabs\HashT2(classroom)\Debug\HashT.exe" /INCREMENTAL /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:\Users\Юзверь\Desktop\newLabs\HashT2(classroom)\Debug\HashT.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"C:\Users\Юзверь\Desktop\newLabs\HashT2(classroom)\Debug\HashT.lib" /MACHINE:X86 Debug\m.obj
+         HashT.vcxproj -> C:\Users\Юзверь\Desktop\newLabs\HashT2(classroom)\Debug\HashT.exe
+     1>Done Building Project "C:\Users\Юзверь\Desktop\newLabs\HashT2(classroom)\HashT\HashT.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.20
+Time Elapsed 00:00:01.31

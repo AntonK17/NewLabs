@@ -59,6 +59,7 @@ unsigned int Table<KEY, DATA>:: Hash(KEY K)
 {
 	unsigned int hash = 2139062143;
 	char *str=new char[K.length()];
+		strcpy(str, K.c_str());
 	for(; *str; str++)
 		hash = (37 * hash + *str)%17;
 
